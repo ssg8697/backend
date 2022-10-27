@@ -3,13 +3,12 @@ from flask_cors import CORS
 import pymysql
 import os
 
-
 app = Flask(__name__)
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route("/hello")
 def hello():
-    host = os.environ['10.104.175.178']
+    host = os.environ['10.109.119.128']
     user = os.environ['root']
     password = os.environ['qwer1234']
     db = os.environ['ssg_db']
