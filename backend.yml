@@ -1,8 +1,25 @@
-apiVersion: v1
-kind: Pod
+apiVersion: apps/v1
+kind: Deployment
 metadata:
-  name: nginx
+ name: backend-deployment
 spec:
-  containers:
-  - name: nginx
-    image: nginx:latest
+ selector:
+   matchLabels:
+    type: backend
+ replicas: 2
+ template:
+   metadata:
+     labels:
+       type: backend
+   spec:
+    containers:
+    - name: backend
+      image: ssg8697/backend:latest
+      envFrom:
+      ports:
+      - containerPort: 8000
+      resources:
+        requests:
+          cpu: 100m
+        limits:
+          cpu: 200m
