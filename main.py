@@ -9,10 +9,11 @@ cors = CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route('/hello')
 def hello():
-    host = "192.168.42.202"
+    host = "10.104.175.178"
     user = "root"
     password = "qwer1234"
     db = "ssg_db"
+    port = 3306
     conn = pymysql.connect(host=host, user=user, password=password, charset='utf8')
     curs = conn.cursor()
     sql = "select * from student"
