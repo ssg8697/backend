@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_cors import CORS
 import pymysql
+
 host = "192.168.42.202"
 user = "root"
 password = "qwer1234"
@@ -21,7 +22,7 @@ cors = CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route('/hello')
 def hello():
-    result = {print(rows)}
+    result = {rows}
     return result
 
 if __name__ == "__main__":
