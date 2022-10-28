@@ -13,7 +13,6 @@ def hello():
     user = os.environ['root']
     password = os.environ['qwer1234']
     db = os.environ['ssg_db']
-    prot = os.environ['3306']
     conn = pymysql.connect(host=host, user=user, db=db, password=password, charset='utf8')
     curs = conn.cursor()
     sql = "select * from student";
