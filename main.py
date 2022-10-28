@@ -3,6 +3,7 @@ from flask_cors import CORS
 import pymysql
 import os
 
+
 app = Flask(__name__)
 cors = CORS(app, resources={r"/*": {"origins": "*"}})
 
