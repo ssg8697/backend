@@ -8,7 +8,7 @@ cors = CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route("/hello")
 def hello():
-    host = os.environ['10.109.119.128']
+    host = os.environ['10.99.140.44']
     user = os.environ['root']
     password = os.environ['qwer1234']
     db = os.environ['ssg_db']
