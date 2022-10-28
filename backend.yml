@@ -14,7 +14,7 @@ spec:
    spec:
     containers:
     - name: backend
-      image: ssg8697/backend:latest
+      image: ssg8697/backend:100
       envFrom:
       ports:
       - containerPort: 8000
